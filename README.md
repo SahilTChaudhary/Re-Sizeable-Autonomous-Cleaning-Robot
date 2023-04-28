@@ -14,6 +14,9 @@ Cleaning robots have advanced significantly in recent years, owing to their incr
 * Conducted a Static Stress Analysis on the chassis of the robot using Ansys
 * Built a Functional Prototype
 
+
+![Screenshot 2023-04-28 153656](https://user-images.githubusercontent.com/56467439/235120153-a550872f-a8d0-46c0-99fa-4a4f742fced3.jpg)
+
 ---
 
 # CONCLUSION
