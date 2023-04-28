@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-4.38422850545704E-17 5.84283677754296E-18 -1.48723553053516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.772800000000001" />
+      <inertia
+        ixx="0.00668137120000001"
+        ixy="3.0025479819219E-49"
+        ixz="4.90369492621039E-33"
+        iyy="0.0067378496"
+        iyz="6.92893375813485E-19"
+        izz="0.0115355216" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_comp">
+    <inertial>
+      <origin
+        xyz="-0.0646447944006999 2.08166817117217E-17 3.58527119395351E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.329184" />
+      <inertia
+        ixx="0.002396417184"
+        ixy="-8.43724224804088E-20"
+        ixz="4.21818887691959E-19"
+        iyy="0.00251953318651969"
+        iyz="3.20053593725935E-19"
+        izz="0.000695389666519684" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/left_comp.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/left_comp.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_prism"
+    type="prismatic">
+    <origin
+      xyz="-0.14279 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_comp" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.1"
+      effort="0"
+      velocity="0.007" />
+  </joint>
+  <link
+    name="right_comp">
+    <inertial>
+      <origin
+        xyz="0.0646447944006999 1.77404372194233E-17 2.05850332277219E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.329184" />
+      <inertia
+        ixx="0.002396417184"
+        ixy="1.04333341179577E-19"
+        ixz="4.22893026994462E-19"
+        iyy="0.00251953318651968"
+        iyz="7.67976538843899E-20"
+        izz="0.000695389666519685" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/right_comp.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF2/meshes/right_comp.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_prism"
+    type="prismatic">
+    <origin
+      xyz="0.13782 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_comp" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.1"
+      upper="0"
+      effort="0"
+      velocity="0.007" />
+  </joint>
+</robot>

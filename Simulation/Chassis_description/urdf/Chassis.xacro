@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<robot name="Chassis" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Chassis_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Chassis_description)/urdf/Chassis.trans" />
+<xacro:include filename="$(find Chassis_description)/urdf/Chassis.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="1.4550500809873055e-16 0.027954839106960696 0.055"/>
+    <mass value="1.0601030399999982"/>
+    <inertia ixx="0.010003" ixy="0.0" ixz="-0.0" iyy="0.008958" iyz="0.0" izz="0.016756"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Chassis_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Chassis_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Left_Box_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.050357220281276066 0.12100000000000122 -0.036025170819706444"/>
+    <mass value="0.31751892882128063"/>
+    <inertia ixx="0.002387" ixy="0.0" ixz="-0.0" iyy="0.000662" iyz="0.0" izz="0.002464"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.15 0.121 -0.091"/>
+    <geometry>
+      <mesh filename="package://Chassis_description/meshes/Left_Box_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.15 0.121 -0.091"/>
+    <geometry>
+      <mesh filename="package://Chassis_description/meshes/Left_Box_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Right_Box_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.050357220281276094 0.12099999999999886 -0.036025170819706506"/>
+    <mass value="0.3175189288212805"/>
+    <inertia ixx="0.002387" ixy="0.0" ixz="0.0" iyy="0.000662" iyz="-0.0" izz="0.002464"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.15 0.121 -0.091"/>
+    <geometry>
+      <mesh filename="package://Chassis_description/meshes/Right_Box_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.15 0.121 -0.091"/>
+    <geometry>
+      <mesh filename="package://Chassis_description/meshes/Right_Box_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Slider14" type="prismatic">
+  <origin rpy="0 0 0" xyz="-0.15 -0.121 0.091"/>
+  <parent link="base_link"/>
+  <child link="Left_Box_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit effort="100" lower="0.01" upper="0.09" velocity="100"/>
+</joint>
+
+<joint name="Slider15" type="prismatic">
+  <origin rpy="0 0 0" xyz="0.15 -0.121 0.091"/>
+  <parent link="base_link"/>
+  <child link="Right_Box_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+  <limit effort="100" lower="-0.09" upper="-0.01" velocity="100"/>
+</joint>
+
+</robot>
