@@ -14,8 +14,14 @@ Cleaning robots have advanced significantly in recent years, owing to their incr
 * Conducted a Static Stress Analysis on the chassis of the robot using Ansys
 * Built a Functional Prototype
 
-<img src='resizeableRobotRender.png'>
-<img src='resizeableRobot_Prototype.png'>
+
+<div style="text-align:center">
+<img src="/images/resizeableRobotRender.png" alt="cleaning_robot" style="width:600px;height:400px;">
+</div>
+<div style="text-align:center">
+<img src="/images/resizeableRobot_Prototype.png" alt="cleaning_robot" style="width:600px;height:400px;">
+</div>
+
 ---
 
 # CONCLUSION
