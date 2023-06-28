@@ -19,7 +19,7 @@ Cleaning robots have advanced significantly in recent years, owing to their incr
 <img src="resizeableRobotRender.png" alt="cleaning_robot" style="width:700px;height:400px;">
 </div>
 <div style="text-align:center">
-<img src="resizeableRobot_Prototype.png" alt="cleaning_robot" style="width:700px;height:400px;">
+<img src="resizeableRobot_Prototype.png" alt="cleaning_robot" style="width:700px;height:300px;">
 </div>
 
 ---
