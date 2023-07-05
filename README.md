@@ -6,7 +6,6 @@ Cleaning robots have advanced significantly in recent years, owing to their incr
 
 **Work Done**
 
-* Finalized the components and sensors for use in the robot
 * Designed a CAD model using Fusion 360
 * Calculated the Wheel Motor Torque requirements and the Battery Life
 * Conducted a Simulation study in CoppeliaSim (V-REP)
